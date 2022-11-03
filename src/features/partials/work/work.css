@@ -37,9 +37,8 @@
     width: 100%;
 }
 
-.button-vote{
+.button-clear,.button-vote{
     appearance: none;
-    background-color: rgba(255, 0, 136, 0.986);
     border: 1px solid rgba(27, 31, 35, .15);
     border-radius: 6px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
@@ -50,6 +49,16 @@
     padding: 0.5rem;
     font-weight: bold;
     margin-top: 1rem;
+}
+
+.button-vote{
+    background-color: rgba(255, 0, 136, 0.986);
+
+}
+
+.button-clear{
+    background-color: rgba(0, 215, 187, 0.986);
+   
 }
 
 

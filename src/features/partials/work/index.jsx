@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { voteSkill } from '../../portfolio/votationSlice';
+import { voteSkill,clearVotes } from '../../portfolio/votationSlice';
 import { skills } from '../../sources/work';
 import './work.css'
 
@@ -9,11 +9,17 @@ const Work = () => {
 
   const dispatch = useDispatch();
   const votS = useSelector(voteSkill)
+
+  
+
+
   // console.log(votS)
 
   return (
     <div className='work-section'>
         <h3 className='my-skills-title'>My Skills</h3>
+        <br />
+        <button className='button-clear' onClick={() => dispatch(clearVotes())}>Clear</button>
         <br />
 
         <div className='container-skill'>

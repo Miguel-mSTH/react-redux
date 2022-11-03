@@ -19,21 +19,21 @@ export const votationSlice = createSlice ({
     reducers: {
         voteSkill: (state,action) => {
             state.skills.forEach( el => {
-                el.id === action.payload ? el.count++ : el.count = el.count
+                if (el.id === action.payload)  el.count++ 
             } )
         },
-        // clear: (state,action) => {
-        //     state.skills.forEach( el => {
-        //         el.id === action.payload ? el.count++ : el.count = el.count
-        //     } )
-        // }
+        clearVotes: (state,action={}) => {
+            state.skills.forEach( el => {
+                el.count = 0
+            } )
+        }
         
 
     }
 
 })
 
-export const { voteSkill/*, clear */ } = votationSlice.actions; //! ACTION
+export const { voteSkill,clearVotes } = votationSlice.actions; //! ACTION
 
 
 export const selectVote = (state) => state.votation.value; //! DATOS DE SOLO LECTORA PARA LEER MI STORE

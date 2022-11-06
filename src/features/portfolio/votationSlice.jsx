@@ -27,7 +27,7 @@ export const votationSlice = createSlice({
   },
 });
 
-export const { voteSkill /*, clear */ } = votationSlice.actions; //! ACTION
+export const { voteSkill, clearVotes } = votationSlice.actions; //! ACTION
 
 export const selectVote = (state) => state.votation.value; //! DATOS DE SOLO LECTORA PARA LEER MI STORE
 
